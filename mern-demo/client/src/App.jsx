@@ -8,7 +8,7 @@ function App() {
   const [email, setEmail] = useState('');
   const [editingId, setEditingId] = useState(null);
 
-  const API_URL = 'https://obscure-waffle-r49p44v5pj56fwj67-5000.app.github.dev/api/students';
+  const API_URL = 'http://localhost:5001/api/students';
 
   const fetchStudents = async () => {
     const res = await fetch(API_URL);
