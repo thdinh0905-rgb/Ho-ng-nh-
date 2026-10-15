@@ -10,7 +10,7 @@ function App() {
 
   const API_URL = window.location.hostname.endsWith('app.github.dev')
   ? `https://${window.location.hostname.replace('-8080.', '-5001.')}/api/students`
-  : 'http://localhost:5001/api/students';git add client/src/App.jsx
+  : 'http://localhost:5001/api/students';
 
   const fetchStudents = async () => {
     const res = await fetch(API_URL);
