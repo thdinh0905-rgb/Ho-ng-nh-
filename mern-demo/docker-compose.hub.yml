@@ -10,7 +10,7 @@ services:
       - mern-network
 
   frontend:
-    image: trinhhoangdinh/mern-frontend:1.0
+    image: trinhhoangdinh/mern-frontend:2.0
     container_name: mern-frontend
     ports:
       - "8080:4173"
