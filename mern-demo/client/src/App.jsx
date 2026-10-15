@@ -8,9 +8,11 @@ function App() {
   const [email, setEmail] = useState('');
   const [editingId, setEditingId] = useState(null);
 
-  const API_URL = window.location.hostname.endsWith('app.github.dev')
-  ? `https://${window.location.hostname.replace('-8080.', '-5001.')}/api/students`
-  : 'http://localhost:5001/api/students';
+  const API_URL =
+    import.meta.env.VITE_API_URL ||
+    (window.location.hostname.endsWith('app.github.dev')
+      ? `https://${window.location.hostname.replace('-8080.', '-5001.')}/api/students`
+      : 'http://localhost:5001/api/students');
 
   const fetchStudents = async () => {
     const res = await fetch(API_URL);
