@@ -8,7 +8,9 @@ function App() {
   const [email, setEmail] = useState('');
   const [editingId, setEditingId] = useState(null);
 
-  const API_URL = 'http://localhost:5001/api/students';
+  const API_URL = window.location.hostname.endsWith('app.github.dev')
+  ? `https://${window.location.hostname.replace('-8080.', '-5001.')}/api/students`
+  : 'http://localhost:5001/api/students';git add client/src/App.jsx
 
   const fetchStudents = async () => {
     const res = await fetch(API_URL);
